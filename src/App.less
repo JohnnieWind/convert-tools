@@ -1,0 +1,36 @@
+@import '~antd/dist/antd.less';
+
+// 这里覆盖antd样式
+.ant-layout .ant-layout-header{
+  background: white ;
+}
+
+// 解决菜单样式偏上问题
+.ant-menu-horizontal {
+  line-height: 62px!important;
+  border-bottom: 0 #fff!important;
+}
+
+.ant-menu-submenu {
+  border-bottom: 0 #fff!important;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3d4757;
+}
+
+.ant-menu-submenu-title {
+  color: #3d4757!important;
+}
+
+// 上传文件圆角边框
+.ant-upload.ant-upload-drag {
+  border-radius: 18px!important;
+}
+
+// 上传文字样式
+.ant-upload-text {
+  font-size: 14px!important;
+  font-weight: 400;
+  color: #767c85!important;
+  margin-top: -12px!important;
+}

@@ -1,0 +1,46 @@
+.des-content{
+  min-width: 1200px;
+  position: relative;
+}
+
+.transform-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #F6743D;
+  margin-top: 60px;
+}
+
+.transform-des{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #767c85;
+  margin-top: -14px;
+  margin-bottom: 40px!important;
+}
+
+#file-upload, #upload-list {
+  width: 1100px;
+  height: 365px;
+  margin: 0 auto;
+}
+
+.pluscircle-icon {
+  /* color: #417ff9!important; */
+  font-size: 72px!important;
+}
+
+#upload-list {
+  padding: 30px;
+  /* display: none; */
+  text-align: center;
+}
+
+.transform-button{
+  margin-top: 60px;
+  border-radius: 2px!important;
+  width: 150px;
+  height: 32px!important;
+  /* background-color: #417ff9!important; */
+}
