@@ -25,8 +25,8 @@ const config = [
     title: '更多',
     subItem: [
       {
-        title: '与你同行官网',
-        url: 'http://yntx.icu:8888'
+        title: '李子捌',
+        url: 'https://blog.csdn.net/qq_41125219'
       },
       {
         title: '与你同行官网',
@@ -41,7 +41,7 @@ const config = [
         title: '问题反馈',
         url: 'http://yntx.icu:8888'
       },
-       {
+      {
         title: '提交工单',
         url: 'http://yntx.icu:8888'
       }

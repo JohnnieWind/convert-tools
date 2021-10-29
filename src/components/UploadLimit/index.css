@@ -1,0 +1,32 @@
+#upload-limit{
+  width: 1100px;
+  height: 365px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgba(65,127,249,.05);
+}
+
+.limit-h1{
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.limit-p{
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+.limit-button{
+  width: 150px;
+  height: 32px!important;
+  font-size: 14px!important;
+  border-radius: 2px!important;
+  font-weight: 400px!important;
+  margin-top: 14px!important;
+}

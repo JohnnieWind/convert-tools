@@ -2,19 +2,20 @@ import React from 'react'
 import { Layout, Menu } from 'antd'
 import './index.css'
 import { CaretDownOutlined } from '@ant-design/icons'
-import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, withRouter, Switch } from 'react-router-dom'
 import Home from '@pages/Home'
 import Convert from '@pages/Convert'
 import NotFound from '@pages/404'
 // import Logo from '@components/Logo'
 import LogoPNG from '@assets/image/logo.png'
 import Footer from './Footer'
-import FooterConfig from './footer.config'
 
 const { Content } = Layout
 const { SubMenu } = Menu
 
+
 function HomeLayout(props) {
+
   const handleClick = (e) => {
     // 获取点击菜单
     const { key } = e
@@ -30,41 +31,11 @@ function HomeLayout(props) {
     )
   }
 
-  const FootItems = () => {
-    return FooterConfig.map((item) => <FootItem item={item} />)
-  }
-
-  const FootItem = (props) => {
-    const { item } = props
-    return (
-      <div className='footer-item'>
-        <div className='bottom-title'>{item.title}</div>
-        {item.subItem.map((sub) => (
-          <FootSubItem subItem={sub} />
-        ))}
-      </div>
-    )
-  }
-
-  const FootSubItem = (props) => {
-    const { subItem } = props
-    return (
-      <a
-        href={subItem.url}
-        className='bottom-link'
-        target='_blank'
-        rel='noreferrer'
-      >
-        {subItem.title}
-      </a>
-    )
-  }
-
   return (
     <Layout className='layout-container'>
       <div className='home-header'>
         <div className='home-content'>
-          <a className='logo' href='/' one-link-mark='yes'>
+          <a className='logo' href='/' >
             <img src={LogoPNG} className='logo-img' alt='logo-img' />
             {/* <Logo className="logo-img" /> */}
             <p className='logo-title'>文档格式转换</p>
@@ -86,7 +57,7 @@ function HomeLayout(props) {
               <Menu.Item key='ppt2pdf'>PPT转PDF</Menu.Item>
               <Menu.Item key='jpg2pdf'>JPG转PDF</Menu.Item>
             </SubMenu>
-            <SubMenu
+            {/* <SubMenu
               key='2image'
               title={<SubMenuTitleWrapper>图片转换</SubMenuTitleWrapper>}
               popupOffset={[-50, -5]}
@@ -109,17 +80,19 @@ function HomeLayout(props) {
               <Menu.Item key='excel2txt'>Excel转TXT</Menu.Item>
               <Menu.Item key='ppt2txt'>PPT转TXT</Menu.Item>
               <Menu.Item key='pdf2txt'>PDF转TXT</Menu.Item>
-            </SubMenu>
+            </SubMenu> */}
           </Menu>
         </div>
       </div>
       {/* 内容区 加上key后让组件刷新*/}
       <Content className='layout-content' key={props.location.key}>
         <Router>
-          <Route path='/' exact component={Home} />
-          <Route path='/convert/:path' exact component={Convert} />
-          <Route path='/404' exact component={NotFound} />
-          {/* <Route component={NotFound} /> */}
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/convert/:path' exact component={Convert} />
+            <Route path='/404' exact component={NotFound} />
+            <Route component={NotFound} />
+          </Switch>
         </Router>
       </Content>
       {/* 底部区 */}
