@@ -4,7 +4,7 @@ const convertNameMap = {
     name: 'Word转PDF',
     description: '在线将word转为pdf',
     // accept: '.doc,.dot,.wps, .wpt, .docx, .dotx, .docm, .dotm, .txt, .wpss, .lrc, .c, .cpp, .h, .asm, .s, .java, .asp, .bat, .bas, .prg, .cmd, .rtf, , .log, .xml, .htm, .html',
-    accept: '.doc .docx',
+    accept: '.doc,.docx',
     exportType: 'pdf',
   },
   excel2pdf: {
